@@ -1,0 +1,2 @@
+# setupPCforWin
+WinPCに開発環境をセットアップするための資産
