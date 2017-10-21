@@ -12,25 +12,21 @@ title Config
 setlocal enabledelayedexpansion
 cd /d %~dp0
 
-for /f "tokens=1,* delims==" %%a in (setting.ini) do (
+for /f "tokens=1,* delims==" %%a in (00_setting.ini) do (
     set %%a=%%b
 )
 
-REM ///////////////////////////////////////////////////////////////////////////
-REM   install software config 
-REM ///////////////////////////////////////////////////////////////////////////
+echo ///////////////////////////////////////////////////////////////////////////
+echo   install software config 
+echo ///////////////////////////////////////////////////////////////////////////
 
-echo git config 
+echo ## git config 
 git config --global user.email "%GIT_USER_EMAIL%"
 git config --global user.name "%GIT_USER_NAME%"
 git config --global core.autoCRLF false
 
-echo ~/.bashrc
+echo ## ~/.bashrc
 
-echo vscode plugin
-
-
-REM ///////////////////////////////////////////////////////////////////////////
-REM   pause
-REM ///////////////////////////////////////////////////////////////////////////
-pause
+echo ## Visual Studio Code Extension
+echo golang
+call code.cmd --install-extension lukehoban.go

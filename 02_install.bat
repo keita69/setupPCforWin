@@ -12,7 +12,7 @@ title install
 setlocal enabledelayedexpansion
 cd /d %~dp0
 
-for /f "tokens=1,* delims==" %%a in (setting.ini) do (
+for /f "tokens=1,* delims==" %%a in (00_setting.ini) do (
     set %%a=%%b
 )
 
@@ -34,8 +34,3 @@ choco install -y clibor
 
 echo install golang
 choco install -y golang
-
-REM ///////////////////////////////////////////////////////////////////////////
-REM   pause
-REM ///////////////////////////////////////////////////////////////////////////
-pause
