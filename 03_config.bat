@@ -16,9 +16,9 @@ for /f "tokens=1,* delims==" %%a in (00_setting.ini) do (
     set %%a=%%b
 )
 
-echo ///////////////////////////////////////////////////////////////////////////
-echo   install software config 
-echo ///////////////////////////////////////////////////////////////////////////
+echo ######################################## 
+echo ### install software config
+echo ######################################## 
 
 echo ## git config 
 git config --global user.email "%GIT_USER_EMAIL%"
